@@ -1343,7 +1343,7 @@ wheels = [
 [[package]]
 name = "teste-bugio"
 version = "0.1.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "fastapi", extra = ["standard"] },
     { name = "sqlalchemy", extra = ["asyncio"] },
