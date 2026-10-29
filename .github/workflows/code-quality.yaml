@@ -11,13 +11,13 @@ jobs:
   linting:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@4
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
       - run: uv run ruff check .
   formatting:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@4
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
       - run: uv run ruff format --check .
   type_consistence:
@@ -32,6 +32,6 @@ jobs:
     timeout-minutes: 5
     continue-on-error: false
     steps:
-      - uses: actions/checkout@4
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
       - run: uv run pytest -v .
